@@ -176,8 +176,8 @@ nav{
             }
 
             @media screen and (max-width: 992px){
-                body{
-                    background-color: #25d366;
+                .float{
+                    background-color: #141414;
                 }
 
             }

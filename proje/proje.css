@@ -32,7 +32,9 @@ nav{
 #checkbox:checked + .div4 {
     display: block;
 }
-
+#checkbox:hover{
+    cursor:pointer;
+}
 
 .div2{
   

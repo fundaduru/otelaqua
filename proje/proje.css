@@ -175,9 +175,9 @@ nav{
             margin-top:16px;
             }
 
-            @media screen and (max-width: 992px){
-               #nav{
-                width: 20%;
+            @media screen and (max-width: 900px){
+               .float{
+                background-color: #101111;
                }
 
             }

@@ -1,3 +1,5 @@
+
+
 rezervasyon.onclick= function(){
 
     

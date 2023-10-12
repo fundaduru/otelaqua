@@ -173,4 +173,8 @@ nav{
             .my-float {
             margin-top:16px;
             }
+
+            #nav{
+                width: auto;
+            }
     

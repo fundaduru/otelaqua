@@ -176,9 +176,13 @@ nav{
             }
 
             @media screen and (max-width: 900px){
-               .float{
-                background-color: #101111;
-               }
+              
 
+            }
+
+            @media screen and (max-height:500px){
+.div5{
+    background-color: #25d366;
+}
             }
     

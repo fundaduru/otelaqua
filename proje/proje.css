@@ -1,5 +1,6 @@
 *{
     user-select: none;
+
 }
 .div, #b{
     text-align: center;
@@ -174,7 +175,10 @@ nav{
             margin-top:16px;
             }
 
-            #nav{
-                width: 40%;
+            @media screen and (max-width: 992px){
+                body{
+                    background-color: #25d366;
+                }
+
             }
     

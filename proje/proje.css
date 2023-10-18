@@ -37,7 +37,7 @@ nav{
     cursor:pointer;
 }
 
-.div2{
+.div2,.div7{
   
     opacity: 0; 
    
@@ -46,6 +46,11 @@ nav{
    
     
     margin: 10px;
+}
+.carousel-inner:hover .div7{
+    opacity: 1;
+    text-align: center;
+
 }
 .div1:hover .div2{
 

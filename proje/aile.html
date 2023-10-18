@@ -78,7 +78,8 @@
     var eylulFark=(cikis-agu)-(1000 * 60 * 60 * 24);
     var eylul=cikis-giris;
     var kisi=document.getElementById("kisi3").value;
-    
+    let a= Number(kisi);
+
     if(giris>cikis){
          
        
@@ -102,49 +103,26 @@
         ucret.value="0";
         }
     
-    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="3"){
+    if(aguFark>=0 && eylulFark>=0 && giris<cikis ){
      var sonuc= (aguFark*2500)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
      
-     ucret.value =sonuc*3;
+     ucret.value =sonuc*a;
     }
-    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="4"){
-     var sonuc= (aguFark*2500)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
-     
-     ucret.value =sonuc*4;
-    }
-    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="5"){
-     var sonuc= (aguFark*2500)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
-     
-     ucret.value =sonuc*5;
-    }
+  
 
 
-    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="3"){
+    if(aguFark<=0 && eylulFark>=0 && giris<cikis){
      var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
-     ucret.value =  sonuc1*3 ;
+     ucret.value =  sonuc1*a ;
     }
-    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="4"){
-     var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
-     ucret.value =  sonuc1*4 ;
-    }
-    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="5"){
-     var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
-     ucret.value =  sonuc1*5 ;
-    }
+   
 
     
     
-    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="3"){
+    if(aguFark>=0 && eylulFark<=0 && giris<cikis){
      var sonuc2=(eylul*2500)/ (1000 * 60 * 60 * 24);
-     ucret.value=sonuc2*3 ;
+     ucret.value=sonuc2*a ;
     }
-    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="4"){
-     var sonuc2=(eylul*2500)/ (1000 * 60 * 60 * 24);
-     ucret.value=sonuc2*4 ;
-    }
-    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="5"){
-     var sonuc2=(eylul*2500)/ (1000 * 60 * 60 * 24);
-     ucret.value=sonuc2*5 ;
-    }}
+   }
     </script>
 </body></html>

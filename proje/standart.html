@@ -78,7 +78,7 @@
     var eylulFark=(cikis-agu)-(1000 * 60 * 60 * 24);
     var eylul=cikis-giris;
     var kisi=document.getElementById("kisi2").value;
-    
+    let a= Number(kisi);
     if(giris>cikis){
        
        
@@ -105,15 +105,15 @@
     if(aguFark>=0 && eylulFark>=0 && giris<cikis){
      var sonuc= (aguFark*1500)/ (1000 * 60 * 60 * 24)+(eylulFark*1250)/ (1000 * 60 * 60 * 24);
      
-     ucret.value =sonuc;
+     ucret.value =sonuc*a;
     }
     if(aguFark<=0 && eylulFark>=0 && giris<cikis){
      var sonuc1=(eylul*1250)/ (1000 * 60 * 60 * 24);
-     ucret.value =  sonuc1 ;
+     ucret.value =  sonuc1*a ;
     }
     if(aguFark>=0 && eylulFark<=0 && giris<cikis){
      var sonuc2=(eylul*1500)/ (1000 * 60 * 60 * 24);
-     ucret.value=sonuc2 ;
+     ucret.value=sonuc2*a ;
     }}
     </script>
 </body></html>

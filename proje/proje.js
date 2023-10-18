@@ -24,6 +24,15 @@ let r4=document.getElementById("r4").value;
     localStorage.setItem("çıkış tarihi",r2);
     localStorage.setItem("oda",r3);
     localStorage.setItem("kişi sayısı",r4);
+
+    Swal.fire({
+            
+        text: 'Başarılı. Müsaitlik durumuna göre sizi arayacağız.',
+    
+        confirmButtonText: 'Tamam'
+      }); 
+
+
     }
     else{
         Swal.fire({

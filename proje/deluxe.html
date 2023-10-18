@@ -78,7 +78,7 @@
     var eylulFark=(cikis-agu)-(1000 * 60 * 60 * 24);
     var eylul=cikis-giris;
     var kisi=document.getElementById("kisi1").value;
-    
+    let a= Number(kisi);
     if(giris>cikis){
          
        
@@ -101,35 +101,25 @@
         ucret.value="0";
         }
     
-    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="1"){
+    if(aguFark>=0 && eylulFark>=0 && giris<cikis ){
      var sonuc= (aguFark*2600)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
      
-     ucret.value =sonuc;
-    }
-    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="2"){
-     var sonuc= (aguFark*2600)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
-     
-     ucret.value =sonuc*2;
+     ucret.value =sonuc*a;
     }
 
 
-    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="1"){
+
+    if(aguFark<=0 && eylulFark>=0 && giris<cikis ){
      var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
-     ucret.value =  sonuc1 ;
+     ucret.value =  sonuc1*a ;
     }
-    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="2"){
-     var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
-     ucret.value =  sonuc1*2 ;
-    }
+    
 
 
-    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="1"){
+    if(aguFark>=0 && eylulFark<=0 && giris<cikis ){
      var sonuc2=(eylul*2600)/ (1000 * 60 * 60 * 24);
-     ucret.value=sonuc2 ;
+     ucret.value=sonuc2*a ;
     }
-    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="2"){
-     var sonuc2=(eylul*2600)/ (1000 * 60 * 60 * 24);
-     ucret.value=sonuc2*2 ;
-    }}
+   }
     </script>
 </body></html>

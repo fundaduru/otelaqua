@@ -2,7 +2,7 @@
     user-select: none;
 
 }
-.div, #b{
+.div, #b, .i{
     text-align: center;
     display: flex;            
     justify-content: center;            
@@ -35,6 +35,25 @@ nav{
 }
 #checkbox:hover{
     cursor:pointer;
+}
+.cost{
+    text-align: center;
+    display: flex;
+    margin: 20px;
+}
+.button3
+{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+   
+    margin: 20px;
+       width: 280px;
+       height: 40px;
+       font-size: 20px;
+       font-family: 'Times New Roman', Times, serif;
+       border-color: aliceblue;
+       border-radius: 10px; 
 }
 
 .div2,.div7{
@@ -90,7 +109,18 @@ nav{
        font-family: 'Times New Roman', Times, serif;
        border-color: beige;
        border-radius: 10px;
+       text-align: center;
        
+    }
+
+    .kisi{
+        border-color: rgb(94, 136, 136);
+        width: 100px;
+        height: 50px;
+        font-size: larger;
+        font-family: 'Times New Roman', Times, serif;
+        border-color: beige;
+        border-radius: 10px;  
     }
     #table{
         display: flex;            

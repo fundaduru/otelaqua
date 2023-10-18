@@ -46,12 +46,14 @@
         <b class="baslik">Ücret Hesaplama</b>
      </div><br><br>
      <div >
-        <table id="table"  >
+        <table id="table" style="text-align: center;" >
             <th>Giriş yapılacak tarih</th>
             <th>Çıkış yapılacak tarih</th>
+            <th>Kişi sayısı</th>
     <tr>
-                <td><input type="date" value=" 30" min="2023-08-01" max="2023-09-30" onkeydown="return false" id="giris"   placeholder="Giriş yapılacak tarih"></td>
-                <td><input type="date"  min="2023-08-01" max="2023-09-30" onkeydown="return false" id="cikis"   placeholder="Çıkış yapılacak tarih"></td>
+                <td><input type="date" value=" 30" min="2023-08-01" max="2023-09-30" onkeydown="return false" id="giris"   ></td>
+                <td><input type="date"  min="2023-08-01" max="2023-09-30" onkeydown="return false" id="cikis"   ></td>
+                <td><input type="number" min="3" max="5" onkeydown="return false" class="kisi" placeholder="3" id="kisi3"></td>
                 <td><input   id="hesapla"  type=button  value="hesapla"></td>
             </tr>
             </table>
@@ -75,12 +77,13 @@
     var aguFark= (agu-giris)+(1000 * 60 * 60 * 24);
     var eylulFark=(cikis-agu)-(1000 * 60 * 60 * 24);
     var eylul=cikis-giris;
-    
+    var kisi=document.getElementById("kisi3").value;
     
     if(giris>cikis){
          
        
-       
+      
+    
       Swal.fire({
             
             text: 'Çıkış tarihiniz giriş tarihinizden önce olamaz.',
@@ -88,19 +91,60 @@
             confirmButtonText: 'Tamam'
           });
         ucret.value="0";}
+
+        if(kisi==""){
+        Swal.fire({
+            
+            text: 'Kişi sayısı giriniz.',
+        
+            confirmButtonText: 'Tamam'
+          });
+        ucret.value="0";
+        }
     
-    if(aguFark>=0 && eylulFark>=0 && giris<cikis){
+    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="3"){
      var sonuc= (aguFark*2500)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
      
-     ucret.value =sonuc;
+     ucret.value =sonuc*3;
     }
-    if(aguFark<=0 && eylulFark>=0 && giris<cikis){
+    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="4"){
+     var sonuc= (aguFark*2500)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
+     
+     ucret.value =sonuc*4;
+    }
+    if(aguFark>=0 && eylulFark>=0 && giris<cikis && kisi=="5"){
+     var sonuc= (aguFark*2500)/ (1000 * 60 * 60 * 24)+(eylulFark*2250)/ (1000 * 60 * 60 * 24);
+     
+     ucret.value =sonuc*5;
+    }
+
+
+    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="3"){
      var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
-     ucret.value =  sonuc1 ;
+     ucret.value =  sonuc1*3 ;
     }
-    if(aguFark>=0 && eylulFark<=0 && giris<cikis){
+    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="4"){
+     var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
+     ucret.value =  sonuc1*4 ;
+    }
+    if(aguFark<=0 && eylulFark>=0 && giris<cikis && kisi=="5"){
+     var sonuc1=(eylul*2250)/ (1000 * 60 * 60 * 24);
+     ucret.value =  sonuc1*5 ;
+    }
+
+    
+    
+    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="3"){
      var sonuc2=(eylul*2500)/ (1000 * 60 * 60 * 24);
-     ucret.value=sonuc2 ;
+     ucret.value=sonuc2*3 ;
+    }
+    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="4"){
+     var sonuc2=(eylul*2500)/ (1000 * 60 * 60 * 24);
+     ucret.value=sonuc2*4 ;
+    }
+    if(aguFark>=0 && eylulFark<=0 && giris<cikis && kisi=="5"){
+     var sonuc2=(eylul*2500)/ (1000 * 60 * 60 * 24);
+     ucret.value=sonuc2*5 ;
     }}
     </script>
 </body></html>

@@ -46,12 +46,14 @@
         <b class="baslik">Ücret Hesaplama</b>
      </div><br><br>
      <div >
-        <table id="table"  >
+        <table id="table" style="text-align: center;" >
             <th>Giriş yapılacak tarih</th>
             <th>Çıkış yapılacak tarih</th>
+            <th>Kişi sayısı</th>
     <tr>
-                <td><input type="date" value=" 30" min="2023-08-01" max="2023-09-30" onkeydown="return false" id="giris"   placeholder="Giriş yapılacak tarih"></td>
-                <td><input type="date"  min="2023-08-01" max="2023-09-30" onkeydown="return false" id="cikis"   placeholder="Çıkış yapılacak tarih"></td>
+                <td><input type="date"  min="2023-08-01" max="2023-09-30" onkeydown="return false" id="giris"  ></td>
+                <td><input type="date"  min="2023-08-01" max="2023-09-30" onkeydown="return false" id="cikis"   ></td>
+                <td><input type="number" min="1" max="2" onkeydown="return false" class="kisi" placeholder="2" id="kisi2" ></td>
                 <td><input   id="hesapla"  type=button  value="hesapla"></td>
             </tr>
             </table>
@@ -75,7 +77,7 @@
     var aguFark= (agu-giris)+(1000 * 60 * 60 * 24);
     var eylulFark=(cikis-agu)-(1000 * 60 * 60 * 24);
     var eylul=cikis-giris;
-    
+    var kisi=document.getElementById("kisi2").value;
     
     if(giris>cikis){
        
@@ -89,7 +91,16 @@
         
         ucret.value ="0" ;
       }
-
+      if(kisi==""){
+        Swal.fire({
+            
+            text: 'Kişi sayısı giriniz.',
+        
+            confirmButtonText: 'Tamam'
+          });
+        ucret.value="0";
+        }
+    
     
     if(aguFark>=0 && eylulFark>=0 && giris<cikis){
      var sonuc= (aguFark*1500)/ (1000 * 60 * 60 * 24)+(eylulFark*1250)/ (1000 * 60 * 60 * 24);

@@ -140,11 +140,22 @@ nav{
        border-color: beige;
     }
 
-    #rezervasyon,#r1,#r2, #r3, #r4{
+    #rezervasyon,#r1,#r2, #r3, #r4,#isim, #mail{
         
         padding: 10px;
         text-align: center;
-        width: 200px;
+        width: 150px;
+        height: 50px;
+        font-size: larger;
+        font-family: 'Times New Roman', Times, serif;
+        border-radius: 10px;
+        border-color: rgb(121, 118, 118);
+        margin: 10px;
+    }
+    #mail1{
+        padding: 10px;
+        text-align: center;
+        width: 250px;
         height: 50px;
         font-size: larger;
         font-family: 'Times New Roman', Times, serif;
